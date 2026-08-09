@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+
+
+
+      <video id="myVideo" width="" height="" controls muted autoplay loop>
+  <source src="running.mp4" type="video/mp4">
+  Your browser does not suppo loop rt the video tag.
+</video><br><br>
+    
+<audio  id ="bgMusic" autoplay loop>
+    <source src="Dhurandhar.mp3" type="audio/mpeg">
+</audio>
+<button onclick="playVideo()">Play Video</button>
+<button onclick="pauseVideo()">Pause Video</button>
+<button onclick="stopVideo()">Stop Video</button>
+<button onclick="startMusic()">🎵 Play Music</button>
+<button onclick="pauseMusic()">🎵 Pause Music</button>
+  <script>
+    const video = document.getElementById("myVideo");
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+    }
+
+    function stopVideo() {
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    function startMusic() {
+    document.getElementById("bgMusic").play();
+    }
+
+     function pauseMusic() {
+    document.getElementById("bgMusic").pause();
+     }
+
+    function playPart() {
+    document.getElementById("bgMusic").currentTime = 5; // Start at 10 seconds
+    document.getElementById("bgMusic").play();
+
+    setTimeout(() => {
+        document.getElementById("bgMusic").pause();       // Stop at 20 seconds
+    }, 10000);
+}
+//https://ai-lady-dance.vercel.app/
+//window.onload = playPart;
+
+</script>
+</body>
+</html>
+
+<!-- key n8n eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYTA3YTY3Yi05ODhlLTQ2ZDYtYmM3ZS0zZTk2MDc4YWUxMDQiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiNmE2ODUxMTYtYmNjNC00YmViLTk2ZGYtODkwMjA0ZjE0MWJjIiwiaWF0IjoxNzg2MjUyMjM3LCJleHAiOjE3ODg4NDAwMDB9.HiVj-r2GYfO-Fq41nlaEPVet-yAQqZbQlnvKnpU_Ao0 -->
